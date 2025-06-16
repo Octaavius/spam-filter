@@ -16,9 +16,6 @@ class ModelManager():
         with open('json_data/word2ind.json', 'r') as f:
             self.word2ind = json.load(f)
 
-        with open('json_data/ind2word.json', 'r') as f:
-            self.ind2word = json.load(f)
-
     def load_model(self):
         if os.path.exists('models/gru_model.pth'):
             self.model = torch.load('models/gru_model.pth', weights_only=False)
